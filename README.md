@@ -3,8 +3,64 @@
 # 〉 whoami
 
 Pseudonymous security researcher and builder.
-Bug bounties across web, cloud, and smart contracts.
-Building agentic AI tools and platforms on the side.
+
+I hunt bugs across web apps, cloud, and smart contracts, and I write each one up with the receipts: transcripts, dead ends, and a repro anyone can run. Then I build the tooling I keep wishing existed.
+
+Lately that means agentic AI: kits that put Claude, Gemini, OpenAI and open models into shared rooms, and tools that make agent spend and context visible.
+
+## 〉 how I work
+
+```mermaid
+flowchart LR
+    A["Map the surface"] --> B["Form a hypothesis"]
+    B --> C["Reproduce in a local lab"]
+    C --> D["Confirm live, minimally"]
+    D --> E["Report with receipts"]
+    B -. "dead end, log it" .-> A
+    C -. "doesn't hold" .-> B
+```
+
+Every hypothesis gets tested where it can't hurt anyone first. Dead ends are logged, not deleted.
+
+## 〉 shipped
+
+| Project | What it does | Stack |
+|---|---|---|
+| [**tokenomics**](https://github.com/AIagentPRO78/tokenomics) | See, attribute, and prove the cost and context of every Claude Code session. Reads transcripts offline: no network calls, no telemetry, zero runtime dependencies. [Docs](https://aiagentpro78.github.io/tokenomics/) | JavaScript |
+| [**claude-usage-bar**](https://github.com/AIagentPRO78/claude-usage-bar) | Native macOS menu-bar tracker for Claude Code usage: 5-hour block, today, and month, with per-model splits. Keys live in the macOS Keychain. | Swift |
+| **AgentMeet agent kits**<br>[Claude Code](https://github.com/AIagentPRO78/agentmeet-claude-code-agent) · [OpenAI](https://github.com/AIagentPRO78/agentmeet-openai-agent) · [Gemini](https://github.com/AIagentPRO78/agentmeet-gemini-agent) · [OpenAI-compatible](https://github.com/AIagentPRO78/agentmeet-openai-compatible-agent) | Drop-in agents for [agentmeet.chat](https://agentmeet.chat). Clone, set a token and a room, run. The compatible kit switches between Qwen, DeepSeek, Mistral, Grok, Perplexity, Groq and Ollama with one env var. | TypeScript |
+
+### How the AgentMeet kits fit together
+
+```mermaid
+flowchart LR
+    R["agentmeet.chat room<br/>humans and agents"]
+    R <-->|"@mention / reply"| C["claude-code-agent<br/>local claude CLI:<br/>Skills, MCP, tools"]
+    R <-->|"@mention / reply"| O["openai-agent"]
+    R <-->|"@mention / reply"| G["gemini-agent"]
+    R <-->|"@mention / reply"| X["openai-compatible-agent<br/>Qwen, DeepSeek, Mistral,<br/>Grok, Perplexity, Groq, Ollama"]
+```
+
+### What tokenomics prints (sample report)
+
+```
+tokenomics — session report
+session ab54f620… · main
+
+$0.9030  across 42 turns · 18.4K out · cache hit 71%
+
+context  ████████████████░░░░░░░░ 67% getting tight
+
+cost by model
+model             cost     share  turns  src
+────────────────  ───────  ─────  ─────  ─────
+claude-opus-4-8   $0.7421  82%    31     exact
+claude-haiku-4-5  $0.1609  18%    11     exact
+
+recommendations
+[high] Route mechanical subagents off claude-opus-4-8  ~save $0.31
+       prove it: tokenomics eval --before <opus-run>.jsonl --after <haiku-run>.jsonl
+```
 
 ## 〉 currently building
 
