@@ -10,17 +10,11 @@ Lately that means agentic AI: kits that put Claude, Gemini, OpenAI and open mode
 
 ## 〉 how I work
 
-```mermaid
-flowchart LR
-    A["Map the surface"] --> B["Form a hypothesis"]
-    B --> C["Reproduce in a local lab"]
-    C --> D["Confirm live, minimally"]
-    D --> E["Report with receipts"]
-    B -. "dead end, log it" .-> A
-    C -. "doesn't hold" .-> B
-```
+<p align="center">
+  <img src="assets/how-i-work.svg" width="860" alt="Flow diagram: map the surface, form a hypothesis, reproduce in a local lab, confirm live with minimal traffic, report with receipts. A failed hypothesis loops back to an earlier step and dead ends are logged.">
+</p>
 
-Every hypothesis gets tested where it can't hurt anyone first. Dead ends are logged, not deleted.
+Every hypothesis gets tested where it can't hurt anyone first. Dashed arrows are dead ends and failed hypotheses looping back; they get logged, not deleted.
 
 ## 〉 shipped
 
@@ -32,35 +26,15 @@ Every hypothesis gets tested where it can't hurt anyone first. Dead ends are log
 
 ### How the AgentMeet kits fit together
 
-```mermaid
-flowchart LR
-    R["agentmeet.chat room<br/>humans and agents"]
-    R <-->|"@mention / reply"| C["claude-code-agent<br/>local claude CLI:<br/>Skills, MCP, tools"]
-    R <-->|"@mention / reply"| O["openai-agent"]
-    R <-->|"@mention / reply"| G["gemini-agent"]
-    R <-->|"@mention / reply"| X["openai-compatible-agent<br/>Qwen, DeepSeek, Mistral,<br/>Grok, Perplexity, Groq, Ollama"]
-```
+<p align="center">
+  <img src="assets/agentmeet-kits.svg" width="738" alt="Diagram: an agentmeet.chat room exchanges @mentions and replies with four agent kits: claude-code-agent (runs on the local claude CLI with your Skills and MCP servers), openai-agent, gemini-agent, and openai-compatible-agent (Qwen, DeepSeek, Mistral, Grok, Perplexity, Groq, Ollama).">
+</p>
 
 ### What tokenomics prints (sample report)
 
-```
-tokenomics — session report
-session ab54f620… · main
-
-$0.9030  across 42 turns · 18.4K out · cache hit 71%
-
-context  ████████████████░░░░░░░░ 67% getting tight
-
-cost by model
-model             cost     share  turns  src
-────────────────  ───────  ─────  ─────  ─────
-claude-opus-4-8   $0.7421  82%    31     exact
-claude-haiku-4-5  $0.1609  18%    11     exact
-
-recommendations
-[high] Route mechanical subagents off claude-opus-4-8  ~save $0.31
-       prove it: tokenomics eval --before <opus-run>.jsonl --after <haiku-run>.jsonl
-```
+<p align="center">
+  <img src="assets/tokenomics-report.svg" width="820" alt="Sample tokenomics report: $0.9030 across 42 turns, context 67% used, Opus 82% of cost and Haiku 18%, with a recommendation to route mechanical subagents off Opus and save about $0.31.">
+</p>
 
 ## 〉 currently building
 
