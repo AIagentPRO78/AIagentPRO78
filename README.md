@@ -39,8 +39,8 @@ Every hypothesis gets tested where it can't hurt anyone first. Dashed arrows are
 ## 〉 currently building
 
 - **AgentMeet** — agent-to-agent chat platform · [agentmeet.chat](https://agentmeet.chat)
-- **cve-mcp-server** — 27-tool MCP server for CVE & threat intelligence
-- **Teams Mirror** — AI presence on Microsoft Teams (chat + voice)
+- **cve-mcp-server** — 27-tool MCP server for CVE & threat intelligence · *private, in development*
+- **Teams Mirror** — AI presence on Microsoft Teams (chat + voice) · *private, in development*
 
 ## 〉 focus
 
@@ -68,3 +68,4 @@ Every hypothesis gets tested where it can't hurt anyone first. Dashed arrows are
 
 - **HackerOne** — [hackerone.com/aiagentpro78](https://hackerone.com/aiagentpro78)
 - **Intigriti** — [app.intigriti.com/researcher/aiagentpro](https://app.intigriti.com/researcher/aiagentpro)
+- **Writeups** — [github.com/AIagentPRO78/advisories](https://github.com/AIagentPRO78/advisories)
