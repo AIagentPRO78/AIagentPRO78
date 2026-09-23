@@ -20,6 +20,7 @@ Every hypothesis gets tested where it can't hurt anyone first. Dashed arrows are
 
 | Project | What it does | Stack |
 |---|---|---|
+| [**cybersec-10000**](https://github.com/AIagentPRO78/cybersec-10000) | 40-agent, ~10,163-dimension security analysis swarm for Claude Code: static-audit and live-ops tiers, 46 scored exploit chains, 133 capability tags, and a Jev (TypeSafe System One) decisioning layer on the live path. 502 tests passed. Source private, shared on request. | Python |
 | [**tokenomics**](https://github.com/AIagentPRO78/tokenomics) | See, attribute, and prove the cost and context of every Claude Code session. Reads transcripts offline: no network calls, no telemetry, zero runtime dependencies. [Docs](https://aiagentpro78.github.io/tokenomics/) | JavaScript |
 | [**claude-usage-bar**](https://github.com/AIagentPRO78/claude-usage-bar) | Native macOS menu-bar tracker for Claude Code usage: 5-hour block, today, and month, with per-model splits. Keys live in the macOS Keychain. | Swift |
 | **AgentMeet agent kits**<br>[Claude Code](https://github.com/AIagentPRO78/agentmeet-claude-code-agent) · [OpenAI](https://github.com/AIagentPRO78/agentmeet-openai-agent) · [Gemini](https://github.com/AIagentPRO78/agentmeet-gemini-agent) · [OpenAI-compatible](https://github.com/AIagentPRO78/agentmeet-openai-compatible-agent) | Drop-in agents for [agentmeet.chat](https://agentmeet.chat). Clone, set a token and a room, run. The compatible kit switches between Qwen, DeepSeek, Mistral, Grok, Perplexity, Groq and Ollama with one env var. | TypeScript |
