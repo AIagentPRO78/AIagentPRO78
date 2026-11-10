@@ -20,7 +20,7 @@ Every hypothesis gets tested where it can't hurt anyone first. Dashed arrows are
 
 | Project | What it does | Stack |
 |---|---|---|
-| [**cybersec-10000**](https://github.com/AIagentPRO78/cybersec-10000) | 40-agent, ~10,163-dimension security analysis swarm for Claude Code: static-audit and live-ops tiers, 46 scored exploit chains, 133 capability tags, and a Jev (TypeSafe System One) decisioning layer on the live path. 502 tests passed. Source private, shared on request. | Python |
+| [**cybersec-10000**](https://github.com/AIagentPRO78/cybersec-10000) | 40-agent, ~10,163-dimension security analysis swarm for Claude Code: static-audit and live-ops tiers, 46 scored exploit chains and 133 capability tags. 444 tests passed. Source private, shared on request. | Python |
 | [**DJ SET**](https://djset.club) | Neon, browser-first wall of EDM and trance legends: 88 artists, 1,532 verified tracks, 24 genres, played through official YouTube, SoundCloud, and Mixcloud embeds with a persistent deck. Live at **[djset.club](https://djset.club)** · [Source](https://github.com/AIagentPRO78/edm-hub) | TypeScript |
 | [**tokenomics**](https://github.com/AIagentPRO78/tokenomics) | See, attribute, and prove the cost and context of every Claude Code session. Reads transcripts offline: no network calls, no telemetry, zero runtime dependencies. [Docs](https://aiagentpro78.github.io/tokenomics/) | JavaScript |
 | [**claude-usage-bar**](https://github.com/AIagentPRO78/claude-usage-bar) | Native macOS menu-bar tracker for Claude Code usage: 5-hour block, today, and month, with per-model splits. Keys live in the macOS Keychain. | Swift |
